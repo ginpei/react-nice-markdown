@@ -1,0 +1,42 @@
+{
+  "name": "@ginpei/react-nice-markdown",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/NiceMarkdown.js",
+  "types": "src/types.d.ts",
+  "dependencies": {
+    "@types/highlight.js": "^9.12.3",
+    "@types/markdown-it": "0.0.7",
+    "@types/markdown-it-anchor": "^4.0.3",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.8.16",
+    "@types/styled-components": "^4.1.14",
+    "highlight.js": "^9.15.6",
+    "html-to-react": "^1.3.4",
+    "markdown-it": "^8.4.2",
+    "markdown-it-anchor": "^5.0.2",
+    "react": "^16.8.6",
+    "styled-components": "^4.2.0",
+    "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/jest": "^24.0.12",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest": "^24.8.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ginpei/react-nice-markdown.git"
+  },
+  "author": "Ginpei Takanashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ginpei/react-nice-markdown/issues"
+  },
+  "homepage": "https://github.com/ginpei/react-nice-markdown#readme"
+}
