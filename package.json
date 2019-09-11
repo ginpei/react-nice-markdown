@@ -1,7 +1,7 @@
 {
   "name": "@ginpei/react-nice-markdown",
   "version": "0.1.0",
-  "description": "",
+  "description": "Markdown component with my flavor",
   "main": "dist/NiceMarkdown.js",
   "types": "dist/NiceMarkdown.d.ts",
   "dependencies": {
