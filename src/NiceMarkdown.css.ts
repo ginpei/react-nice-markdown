@@ -1,4 +1,4 @@
-module.exports = `
+export const cssContent = `
 .Markdown-Container code:not(.hljs) {
   background-color: gainsboro;
   border-radius: 2px;

@@ -2,8 +2,8 @@
   "name": "@ginpei/react-nice-markdown",
   "version": "0.1.0",
   "description": "",
-  "main": "src/NiceMarkdown.js",
-  "types": "src/NiceMarkdown.d.ts",
+  "main": "dist/NiceMarkdown.js",
+  "types": "dist/NiceMarkdown.d.ts",
   "dependencies": {
     "@types/highlight.js": "^9.12.3",
     "@types/markdown-it": "0.0.7",
@@ -27,6 +27,8 @@
     "jest": "^24.8.0"
   },
   "scripts": {
+    "build": "tsc",
+    "start": "tsc --watch",
     "test": "jest"
   },
   "repository": {
