@@ -1,5 +1,7 @@
 # @ginpei/react-nice-markdown
 
+![](https://github.com/ginpei/react-nice-markdown/workflows/Node%20CI/badge.svg)
+
 ## Install
 
 ```console
