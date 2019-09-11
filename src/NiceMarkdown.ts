@@ -73,7 +73,7 @@ export default class NiceMarkdown extends React.Component<INiceMarkdownProps> {
     const html: string = this.htmlToReactParser.parse(this.contentHtml);
     return React.createElement(
       'div',
-      { className: 'Markdown-Container' },
+      { className: 'ginpei-NiceMarkdown' },
       html,
     );
   }
