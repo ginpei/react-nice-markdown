@@ -22,9 +22,12 @@
   "devDependencies": {
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "@types/jest": "^24.0.12",
+    "@types/react-dom": "^16.9.0",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
-    "jest": "^24.8.0"
+    "jest": "^24.8.0",
+    "react-dom": "^16.9.0",
+    "ts-jest": "^24.0.2"
   },
   "scripts": {
     "build": "tsc",
