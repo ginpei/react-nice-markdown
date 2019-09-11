@@ -12,24 +12,24 @@ type Props = {
 };
 
 function setUpStylesheet () {
-  const elOldStyle = document.querySelector('#NiceMarkdown-style');
+  const elOldStyle = document.querySelector('#ginpei-NiceMarkdown-style');
   if (elOldStyle) {
     elOldStyle.parentNode && elOldStyle.parentNode.removeChild(elOldStyle);
   }
 
   const elStyle = document.createElement('style');
-  elStyle.id = 'NiceMarkdown-style';
+  elStyle.id = 'ginpei-NiceMarkdown-style';
   elStyle.textContent = cssContent;
   document.head.appendChild(elStyle);
 
-  const elOldLink = document.querySelector('#NiceMarkdown-highlight');
+  const elOldLink = document.querySelector('#ginpei-NiceMarkdown-highlight');
   if (elOldLink) {
     elOldLink.parentNode && elOldLink.parentNode.removeChild(elOldLink);
   }
 
   const elLink = document.createElement('link');
   elLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-dark.min.css';
-  elLink.id = 'NiceMarkdown-highlight';
+  elLink.id = 'ginpei-NiceMarkdown-highlight';
   elLink.rel = 'stylesheet';
   document.head.appendChild(elLink);
 }
