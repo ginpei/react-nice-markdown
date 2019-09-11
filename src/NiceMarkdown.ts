@@ -7,7 +7,7 @@ import { cssContent } from './NiceMarkdown.css';
 // it does not have type declarations
 const HtmlToReactParser = require('html-to-react').Parser;
 
-type INiceMarkdownProps = {
+type Props = {
   content: string;
 };
 
@@ -34,7 +34,7 @@ function setUpStylesheet () {
   document.head.appendChild(elLink);
 }
 
-export default class NiceMarkdown extends React.Component<INiceMarkdownProps> {
+export default class NiceMarkdown extends React.Component<Props> {
   private htmlToReactParser = new HtmlToReactParser();
 
   private mdit = new MarkdownIt({
@@ -59,7 +59,7 @@ export default class NiceMarkdown extends React.Component<INiceMarkdownProps> {
     return this.mdit.render(this.props.content || '');
   }
 
-  constructor (props: INiceMarkdownProps) {
+  constructor (props: Props) {
     super(props);
 
     this.mdit.use(markdownItAnchor, {
