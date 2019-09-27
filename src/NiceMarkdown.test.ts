@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import NiceMarkdown from './NiceMarkdown';
 
 describe('NiceMarkdown', () => {
+  let elWrapper: HTMLDivElement;
   let elMarkdown: HTMLDivElement;
 
   function render(content: string) {
@@ -10,10 +11,19 @@ describe('NiceMarkdown', () => {
       NiceMarkdown,
       { content },
     );
-    ReactDOM.render(component, document.body);
+    ReactDOM.render(component, elWrapper);
 
-    elMarkdown = document.body.firstChild as HTMLDivElement;
+    elMarkdown = elWrapper.firstChild as HTMLDivElement;
   }
+
+  beforeEach(() => {
+    elWrapper = document.createElement('div');
+    document.body.appendChild(elWrapper);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(elWrapper);
+  });
 
   describe('wrapper', () => {
     beforeEach(() => {
