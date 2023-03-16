@@ -6,13 +6,14 @@ describe('NiceMarkdown', () => {
   let elMarkdown: HTMLDivElement;
 
   function render(content: string) {
+    const elArea = document.createElement('div');
     const component = React.createElement(
       NiceMarkdown,
       { content },
     );
-    ReactDOM.render(component, document.body);
+    ReactDOM.render(component, elArea);
 
-    elMarkdown = document.body.firstChild as HTMLDivElement;
+    elMarkdown = elArea.firstChild as HTMLDivElement;
   }
 
   describe('wrapper', () => {
