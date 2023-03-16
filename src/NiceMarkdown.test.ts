@@ -1,25 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import NiceMarkdown from './NiceMarkdown';
 
 describe('NiceMarkdown', () => {
   let elMarkdown: HTMLDivElement;
 
-  function render(content: string) {
+  async function render(content: string) {
     const elArea = document.createElement('div');
+    const root = createRoot(elArea);
+
     const component = React.createElement(
       NiceMarkdown,
       { content },
     );
-    ReactDOM.render(component, elArea);
+    root.render(component);
 
+    await tick();
     elMarkdown = elArea.firstChild as HTMLDivElement;
   }
 
   describe('wrapper', () => {
-    beforeEach(() => {
-      render('Hi');
-    });
+    beforeEach(() => render('Hi'));
 
     it('renders with class name', () => {
       expect(elMarkdown.className).toBe('ginpei-NiceMarkdown');
@@ -27,9 +28,7 @@ describe('NiceMarkdown', () => {
   });
 
   describe('hljs', () => {
-    beforeEach(() => {
-      render('```ts\nconst foo = 123;\n```');
-    });
+    beforeEach(() => render('```ts\nconst foo = 123;\n```'));
 
     it('renders with syntax highlight', () => {
       const elPre = elMarkdown.firstChild as HTMLElement;
@@ -39,9 +38,7 @@ describe('NiceMarkdown', () => {
   });
 
   describe('markdown-it-anchor', () => {
-    beforeEach(() => {
-      render('# Heading');
-    });
+    beforeEach(() => render('# Heading'));
 
     it('renders with syntax highlight', () => {
       const elHeading = elMarkdown.firstChild as HTMLElement;
@@ -52,3 +49,7 @@ describe('NiceMarkdown', () => {
     });
   });
 });
+
+function tick() {
+  return new Promise((f) => setTimeout(f, 1));
+}
